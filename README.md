@@ -9,3 +9,8 @@ Depois eu listei os eventos dentro de arrays aonde eu pego separadamente cada ev
 Depois eu fiz esse retorno estruturado no navegador ser retornado para usuario e enviado para o e-mail que colocou no formulario juntamente com o codigo utilizado no formulario.
 
 Qualquer dúvida e-mail -> fabiojuniorbroficial@gmail.com
+
+
+Unica coisa que deve ser configurado e a formatação do e-mail para seu jeito.
+
+E as configurações SMTP do PHPMailer.
