@@ -1,28 +1,13 @@
 <?php
 
-
- // Para buscar o status do objeto , basta enviar uma requisição
- // para o arquivo " obj.php " dentro de " api " .
- // O arquivo " obj.php " buscara o status do objeto no próprio site dos correios
-
- // PHP >= 5.6
- // @author : Luan Alves
- // Jul / 2019
   if (isset($_POST['submit'])){
      $sucesso = 0;
     $codigoderastreio = $_POST['codigoderastreio'];
     $emaildapessoa = $_POST['email'];
 
-    // ALGUMAS VARIAVEIS
-    // $status = $obj -> action;
-
-//     $emaildapessoa = "fabiojuniobroficial@gmail.com";
-
 
  $obj = "$codigoderastreio";
- //$url = "http://localhost/rastreio/api/obj.php?obj={$obj}";
  $json = json_decode(file_get_contents("http://hosthase.com.br/rastreio/api/obj.php?obj={$obj}"));
- //$rastreio = json_decode(file_get_contents($json));
 
     $array = get_object_vars($json);
     //var_dump($array[0]->action);
@@ -78,22 +63,7 @@
     //==========================================
     //  FIM DAS VARIAVEIS SEPARANDO EM ARRAYS
     //==========================================
-    //echo '<pre>';
-     //var_dump($json[$key] = 5);
-     //var_dump($json);
-     
-    //  $list = array('action', 'action', 'action');
-    //  var_dump([]);
-    //  $key = array_search('green', $array);
-    // echo $obj -> action."<br/>";
-    //     foreach($json as $key => $obj){
-    //        echo $obj -> message."<br/>"; 
-    //    }
 
-    
-    
-    // $status = $obj -> action;
-    // $datapostagem = $obj -> date;
 
 
 $empresa = "CORREIOS";
@@ -116,18 +86,14 @@ function email($para_email, $para_nome, $assunto, $html){
     $mail2->CharSet = 'UTF-8';
     $mail2->Encoding = 'base64';
     
-    $mail2->From = "contato@hosthase.com.br";
-    $mail2->FromName = "E-Lastic Brasil";
+    $mail2->From = "";
+    $mail2->FromName = "";
 
-    $mail2->AddEmbeddedImage;
-    //$mail2->AddEmbeddedImage('images/header.jpg', 'logo_fabin', 'header.jpg');
-    //$mail2->AddEmbeddedImage('images/infor.jpg', 'icon_infor', 'infor.jpg');
-
-    $mail2->Host = "srv90.prodns.com.br";
-    $mail2->Port = "587";
+    $mail2->Host = "";
+    $mail2->Port = "";
     $mail2->STMPAuth = true;
-    $mail2->Username = "contato@hosthase.com.br";
-    $mail2->Password = "123QAZqaz!";
+    $mail2->Username = "";
+    $mail2->Password = "";
 
     $mail2->addAttachment( 'items/estrutura_email.pdf', 'rastreio.pdf');
 
@@ -284,8 +250,8 @@ $estrutura = "
 
         <h3>Dados do Envio</h3><br>
         <h5>FÁBIO ALVES DA SILVA JÚNIOR</h5>
-        <h5>Tel.: 61 9 8309-7008 / 24 9 9200-3015</h5>
-        <h5>Rua Paineira 152 </h5>
+        <h5>Tel.: </h5>
+        <h5>Endereço: Abc </h5>
         <h5>Renascer Macapá/AP</h5><br>
 
         <h4>Falta Pouco!</h4>
