@@ -1,0 +1,11 @@
+{
+    "name": "f34ra/rastreio",
+    "description": "Sistema de Rastreador",
+    "authors": [
+        {
+            "name": "Fabintech",
+            "email": "fabiojuniorbroficial@gmai.com"
+        }
+    ],
+    "require": {}
+}
